@@ -34,7 +34,7 @@
 
 require __DIR__.'/contact.php';
 
-$user = [
+$contact = [
     'id' => '',
     'firstname' => '',
     'lastname' => '',
@@ -42,8 +42,8 @@ $user = [
     'telephone' => '',
 ];
 
-$user = array_merge($user, $_POST);
+$contact = array_merge($contact, $_POST);
 
-var_dump($user);
+var_dump($contact);
 
 ?>
