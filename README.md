@@ -1,2 +1,2 @@
-# JSON-crud-
+# JSONcrud
 PHP JSON CRUD
