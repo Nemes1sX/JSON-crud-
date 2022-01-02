@@ -3,12 +3,12 @@
 
 function getContacts() 
 {
-    return json_decode(__DIR__.'/contacts.json');
+    return json_decode(file_get_contents('contacts.json'), true);
 }
 
 function getContactById($id) 
 {
-    $contacts = getUsers();
+    $contacts = getContacts();
 
     foreach ($contacts as $contact) {
         if ($contact['id'] == $id) {
@@ -36,15 +36,16 @@ function updateContact($data, $id) {
     
     foreach ($contacts as $i => $contact) {
         if ($contact['id'] == $id) {
-            $contacts[$i] = $updateUser = array_merge($contact, $data);
+            $contacts[$i] = $updateUser = array_merge((array) $contact, $data);
         }
     }
+    putJson($contacts);
 
     return $updateUser;
 }
 
 function deleteContact($id) {
-    $contacts = getUsers();
+    $contacts = getContacts();
 
     foreach ($contacts as $i => $contact) {
         if ($contact['id'] == $id) {
@@ -56,7 +57,7 @@ function deleteContact($id) {
 }
 
 function putJson($contacts) {
-    file_put_contents(__DIR__.'/contacts.json', json_encode($contacts, JSON_PRETTY_PRINT));
+    file_put_contents('contacts.json', json_encode($contacts, JSON_PRETTY_PRINT));
 }
 
 ?>

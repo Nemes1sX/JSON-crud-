@@ -4,6 +4,7 @@ require 'contact.php';
 
 $contacts = getContacts();
 
+include 'partials/header.php';
 ?>
 
 <div class="container">
@@ -28,9 +29,9 @@ $contacts = getContacts();
                 <td><?php echo $contact['lastname'] ?></td>
                 <td><?php echo $contact['address'] ?></td>
                 <td><?php echo $contact['phone'] ?></td>
-                <td>
+                <td class="btn-group">
                     <a href="edit.php?id=<?php echo $contact['id'] ?>"
-                       class="btn btn-sm btn-outline-secondary">Update</a>
+                       class="btn btn-sm btn-outline-secondary" style="margin-right: 20px;">Update</a>
                     <form method="POST" action="delete.php">
                         <input type="hidden" name="id" value="<?php echo $contact['id'] ?>">
                         <button class="btn btn-sm btn-outline-danger">Delete</button>

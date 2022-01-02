@@ -16,28 +16,28 @@
                   action="">
                 <div class="form-group">
                     <label>First name</label>
-                    <input name="name" value="<?php echo $contact['firstname'] ?>"
+                    <input name="firstname" value="<?php echo $contact['firstname'] ?>"
                            class="form-control">
                     <div class="invalid-feedback">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Last name</label>
-                    <input name="contactname" value="<?php echo $contact['lastname'] ?>"
+                    <input name="lastname" value="<?php echo $contact['lastname'] ?>"
                            class="form-control">
                     <div class="invalid-feedback">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Phone</label>
-                    <input name="phone" value="<?php echo $contact['telephone'] ?>"
-                           class="form-control  ">
+                    <input name="phone" value="<?php echo $contact['phone'] ?>"
+                           class="form-control">
                     <div class="invalid-feedback">
                     </div>
                 </div>
                 <div class="form-group">
                     <label>Address</label>
-                    <input name="website" value="<?php echo $contact['address'] ?>"
+                    <input name="address" value="<?php echo $contact['address'] ?>"
                            class="form-control ">
                     <div class="invalid-feedback">
                     </div>

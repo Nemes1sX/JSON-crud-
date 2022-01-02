@@ -1,7 +1,7 @@
 <?php
 
 include 'partials/header.php';
-require __DIR__ . '/contacts.php';
+require 'contact.php';
 
 if (!isset($_GET['id'])) {
     include "partials/404.php";

@@ -7,7 +7,7 @@ $contact = [
     'firstname' => '',
     'lastname' => '',
     'address' => '',
-    'telephone' => '',
+    'phone' => '',
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
